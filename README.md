@@ -7,6 +7,8 @@ This repo is designed to test out using [htl-compiler](https://github.com/megaze
 
 To test each setup run one of the below commands. To see how it is working look at the `esm`, `umd`, and `cjs` directories. For the ESM and UMD tests you will want to open [localhost:3000](http://localhost:3000) after running the command.
 
+Note: The ESM test does not currently work as the htl-compiler does not export an ESM module.
+
 ```bash
 npm run test:esm
 npm run test:umd
