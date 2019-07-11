@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <title>HTL Compiler ESM Testing</title>
         <script type="module">
-          document.write(
-            'Hello, World'
-          );
+          import Compiler from '/htl-compiler/dist/compiler-esm.js';
+
+          document.body.innerHTML = 'Hello, World';
         </script>
     </head>
     <body>
