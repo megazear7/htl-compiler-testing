@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <title>HTL Compiler UMD Testing</title>
-        <script src="/htl-compiler/dist/compiler.umd.js"></script>
+        <script src="/htl-compiler/dist/compiler-umd.js"></script>
         <script type="text/javascript">
           document.write(
-            'TESTING'
+            new Compiler("<div>${message}</div>", { message: "Hello, World!" }).compile()
           );
         </script>
     </head>
