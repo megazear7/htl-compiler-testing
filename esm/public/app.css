@@ -1,0 +1,85 @@
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+
+body {
+  background-color: #fef;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+main > * {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+ol {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.movies li {
+  margin-bottom: 1rem;
+  display: block;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.box {
+  background:-webkit-linear-gradient(#ed55ed ,#ff8fff);
+  margin:50px auto;
+  border: 4px solid #fff;
+  outline:1px solid #999;
+  position: relative;
+}
+
+.box:before, .box:after {
+  content:"";
+  position:absolute;
+  width:50%;
+  border-radius:5px;
+  height:20px;
+  box-shadow:0 15px 5px 5px rgba(0,0,0, 0.3);
+  z-index:-1;
+  bottom:10px;
+  left:10px;
+}
+
+.box:before {
+  right:10px;
+  left:auto;
+  -webkit-transform:rotate(2deg);
+  -moz-transform:rotate(2deg);
+}
+
+.box:after{
+  -webkit-transform:rotate(-2deg);
+  -moz-transform:rotate(-2deg);
+}
+
+.box p, .box h3 {
+  font-size: 1rem;
+  font-family:Satisfy;
+  color:#ffdb94;
+  text-shadow: 0 2px 1px rgba(0,0,0, 0.4);
+}
+
+.box h3 {
+  margin: 0;
+  font-size: 2rem;
+}
