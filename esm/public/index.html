@@ -3,13 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <title>HTL Compiler ESM Testing</title>
-        <script type="module">
-          import Compiler from '/htl-compiler/dist/compiler-esm.js';
-
-          document.body.innerHTML = new Compiler("<div>${message}</div>", { message: "Hello, World!" }).compile()
-        </script>
     </head>
     <body>
         <h1>HTL Compiler ESM Testing</h1>
+        <div id="app-root"></div>
+
+        <script type="module">
+          import Compiler from '/htl-compiler/dist/compiler-esm.js';
+
+          new Compiler(
+            "<div>${message}</div>",
+            { message: "Hello, World!" }
+          ).compile()
+          .then(result => document.querySelector('#app-root').innerHTML = result);
+        </script>
     </body>
 </html>

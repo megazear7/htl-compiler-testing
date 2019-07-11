@@ -4,13 +4,17 @@
         <meta charset="UTF-8" />
         <title>HTL Compiler UMD Testing</title>
         <script src="/htl-compiler/dist/compiler-umd.js"></script>
-        <script type="text/javascript">
-          document.write(
-            new Compiler("<div>${message}</div>", { message: "Hello, World!" }).compile()
-          );
-        </script>
     </head>
     <body>
         <h1>HTL Compiler UMD Testing</h1>
+        <div id="app-root"></div>
+
+        <script type="text/javascript">
+          new Compiler(
+            "<div>${message}</div>",
+            { message: "Hello, World!" }
+          ).compile()
+          .then(result => document.querySelector('#app-root').innerHTML = result);
+        </script>
     </body>
 </html>
