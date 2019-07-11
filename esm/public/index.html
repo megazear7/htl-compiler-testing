@@ -10,10 +10,13 @@
 
         <script type="module">
           import Compiler from '/htl-compiler/dist/compiler-esm.js';
+          import { MoviesUseModel, MovieUseModel } from '/movie-use-model.js';
 
           new Compiler(
             fetch('/template.html').then(res => res.text()),
-            fetch('/resources.json').then(res => res.json())
+            fetch('/resources.json').then(res => res.json()),
+            { MoviesUseModel, MovieUseModel },
+            fetch('/template-types.json').then(res => res.text())
           ).compile()
           .then(result => document.querySelector('#app-root').innerHTML = result);
         </script>

@@ -1,5 +1,10 @@
+<sly data-sly-use.movies="MoviesUseModel">
+
 <h3>${message}</h3>
 
-<ol data-sly-list.movie="${movies}">
-  <li>${movie}</li>
+<ol data-sly-list.movie="${movies.movies}">
+  <li>
+    <div>Name: ${movie.name}</div>
+    <div>Release date: ${movie.releaseDate}</div>
+  </li>
 </ol>
