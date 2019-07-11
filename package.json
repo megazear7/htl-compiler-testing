@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "htl-compiler": "^1.0.2"
+    "htl-compiler": "^1.0.5"
   }
 }

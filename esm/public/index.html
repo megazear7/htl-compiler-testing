@@ -6,7 +6,7 @@
         <script type="module">
           import Compiler from '/htl-compiler/dist/compiler-esm.js';
 
-          document.body.innerHTML = 'Hello, World';
+          document.body.innerHTML = new Compiler("<div>${message}</div>", { message: "Hello, World!" }).compile()
         </script>
     </head>
     <body>
