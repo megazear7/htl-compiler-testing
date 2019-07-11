@@ -12,8 +12,8 @@
           import Compiler from '/htl-compiler/dist/compiler-esm.js';
 
           new Compiler(
-            fetch('/template.html').then(res => res.text()),
-            fetch('/resources.json').then(res => res.json())
+            "<div>${message}</div>",
+            { message: "Hello, World!" }
           ).compile()
           .then(result => document.querySelector('#app-root').innerHTML = result);
         </script>
