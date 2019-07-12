@@ -14,11 +14,8 @@ body {
 
 main > * {
   max-width: 900px;
-  margin: 0 auto;
-}
-
-ol {
-  padding: 0;
+  margin: 0;
+  padding: 1rem;
 }
 
 li {
@@ -31,51 +28,82 @@ h1 {
   font-size: 3rem;
 }
 
+.movies {
+  font-size: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  main > * {
+    margin: 0 auto;
+  }
+}
+
 .movies li {
-  margin-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   display: block;
   padding: 1rem;
   border-radius: 3px;
-  background-color: white;
   box-shadow: 0 10px 6px -6px #777;
 }
 
 .box {
-  background:-webkit-linear-gradient(#ed55ed ,#ff8fff);
+  cursor: pointer;
+  background-color: #18c8e7;
   margin:50px auto;
   border: 4px solid #fff;
   outline:1px solid #999;
   position: relative;
+  transition: 300ms background-color;
+}
+
+.box:hover {
+  background-color: #39d0ea;
 }
 
 .box:before, .box:after {
-  content:"";
-  position:absolute;
-  width:50%;
-  border-radius:5px;
-  height:20px;
-  box-shadow:0 15px 5px 5px rgba(0,0,0, 0.3);
-  z-index:-1;
-  bottom:10px;
-  left:10px;
+  content: "";
+  position: absolute;
+  width: 50%;
+  border-radius: 5px;
+  height: 20px;
+  box-shadow: 0 10px 6px -6px #777;
+  z-index: -1;
+  bottom: 10px;
+  left: 10px;
+  transition: 200ms box-shadow;
 }
 
-.box:before {
-  right:10px;
-  left:auto;
-  -webkit-transform:rotate(2deg);
-  -moz-transform:rotate(2deg);
+.box:hover::before, .box:hover:after {
+  box-shadow: 0 10px 5px 5px rgba(0,0,0, 0.3);
 }
 
-.box:after{
-  -webkit-transform:rotate(-2deg);
-  -moz-transform:rotate(-2deg);
+.box:hover:before {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+}
+
+.box:after {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
 }
 
 .box p, .box h3 {
   font-size: 1rem;
-  font-family:Satisfy;
-  color:#ffdb94;
+  font-family: Satisfy;
+  color: #ffdb94;
   text-shadow: 0 2px 1px rgba(0,0,0, 0.4);
 }
 
