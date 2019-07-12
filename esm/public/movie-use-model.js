@@ -12,8 +12,6 @@ export class MovieUseModel {
   }
 
   formattedReleaseDate() {
-    // TODO NOT WORKING
-    console.log(this); // => undefined
     var monthNames = [
       "January", "February", "March",
       "April", "May", "June", "July",
