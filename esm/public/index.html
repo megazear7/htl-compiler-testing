@@ -10,11 +10,12 @@
 
         <script type="module">
           import Compiler from '/htl-compiler/dist/compiler-esm.js';
+          import UrlResourceResolver from '/url-resource-resolver.js';
           import { MoviesUseModel, MovieUseModel } from '/movie-use-model.js';
 
           new Compiler(
             fetch('/template.html').then(res => res.text()),
-            fetch('/resources.json').then(res => res.json()),
+            new UrlResourceResolver(),
             { MoviesUseModel, MovieUseModel },
             fetch('/template-types.json').then(res => res.text())
           ).compile()

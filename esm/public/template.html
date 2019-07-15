@@ -1,9 +1,9 @@
-<sly data-sly-use.movies="MoviesUseModel">
+<sly data-sly-use.moviesModel="MoviesUseModel">
 
 <main>
   <h1>${message}</h1>
 
-  <ol class="movies" data-sly-list.movie="${movies.movies}">
+  <ol class="movies" data-sly-list.movie="${moviesModel.movies}">
     <li class="box">
       <h3>${movie.name}</h3>
       <p>${movie.formattedReleaseDate}</p>
